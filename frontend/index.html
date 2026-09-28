@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlockWarranty — Warranty Management dApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">BW</span><div><div class="eyebrow">ETHEREUM WARRANTY PLATFORM</div><h1>BlockWarranty</h1><p>Digital warranty lifecycle on a local Ethereum blockchain</p></div></div>
+  <div class="top-actions"><span id="roleBadge" class="role-badge hidden"></span><button id="connectButton" class="primary">Connect MetaMask</button></div>
+</header>
+
+<main class="shell">
+  <div id="networkWarning" class="alert hidden"></div>
+  <div id="message" class="message hidden"></div>
+
+  <section id="connectHero" class="hero card">
+    <div><span class="eyebrow">DECENTRALIZED WARRANTY MANAGEMENT</span><h2>One warranty. One trusted history.</h2><p>Register, transfer, extend, claim, service and verify product warranties with blockchain-backed records.</p></div>
+    <button class="primary large" onclick="document.getElementById('connectButton').click()">Connect wallet</button>
+  </section>
+
+  <section id="appShell" class="hidden">
+    <div class="account-bar card">
+      <div><span class="label">Connected account</span><strong id="accountName">—</strong><small id="walletAddress">—</small></div>
+      <div><span class="label">Role</span><strong id="walletRole">—</strong></div>
+      <div><span class="label">Network</span><strong id="networkName">—</strong></div>
+      <div><span class="label">Smart contract</span><strong id="contractAddress">—</strong></div>
+    </div>
+
+    <nav class="tabs" id="adminTabs">
+      <button data-tab="dashboard" class="tab active">Dashboard</button>
+      <button data-tab="products" class="tab">Products</button>
+      <button data-tab="warranties" class="tab">Warranties</button>
+      <button data-tab="claims" class="tab">Claims</button>
+      <button data-tab="services" class="tab">Service History</button>
+      <button data-tab="activity" class="tab">Blockchain Activity</button>
+      <button data-tab="profile" class="tab">Profile</button>
+    </nav>
+
+    <section id="dashboard" class="tab-panel active"></section>
+    <section id="products" class="tab-panel"></section>
+    <section id="warranties" class="tab-panel"></section>
+    <section id="claims" class="tab-panel"></section>
+    <section id="services" class="tab-panel"></section>
+    <section id="activity" class="tab-panel"></section>
+    <section id="profile" class="tab-panel"></section>
+  </section>
+</main>
+
+<footer>Academic prototype • Ganache Local • Chain 1337 • No real funds</footer>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+<script src="contract-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

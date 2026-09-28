@@ -1,0 +1,19 @@
+{
+  "name": "blockchain-e-warranty-dapp",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Role-based Ethereum/Ganache/MetaMask e-Warranty dApp with claims, service history, extensions and lifecycle dashboards.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network ganache",
+    "test": "hardhat test",
+    "serve": "npx http-server frontend -p 5500 -c-1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "ethers": "^6.13.5"
+  }
+}
